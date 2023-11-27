@@ -15,10 +15,15 @@ Ce dépôt contient un script JavaScript pour implémenter un effet de zoom sur 
     Assurez-vous que votre structure HTML inclut une classe  img-zoom-container pour le conteneur d'image. 
     Personnalisez les styles CSS fournis pour adapter l'apparence de la lentille et du résultat en fonction de vos besoins. 
 
+## Styles CSS 
+
+    Les styles CSS inclus dans le fichier  styles.css définissent l'apparence de la lentille et du résultat. Vous pouvez personnaliser ces styles en fonction de l'esthétique souhaitée pour votre effet de zoom. 
+
+    N'hésitez pas à contribuer, signaler des problèmes ou suggérer des améliorations ! 
+
 ## Exemple d'intégration 
 
-# HTML 
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,8 +44,3 @@ Ce dépôt contient un script JavaScript pour implémenter un effet de zoom sur 
 </body>
 </html>
 
-## Styles CSS 
-
-Les styles CSS inclus dans le fichier  styles.css définissent l'apparence de la lentille et du résultat. Vous pouvez personnaliser ces styles en fonction de l'esthétique souhaitée pour votre effet de zoom. 
-
-N'hésitez pas à contribuer, signaler des problèmes ou suggérer des améliorations ! 
