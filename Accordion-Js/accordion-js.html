@@ -1,0 +1,84 @@
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.faqAnswers {
+  padding: 10px 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.fa-angle-down,.fa-angle-up{
+  padding: 10px;
+}
+
+</style>
+
+
+
+<button class="accordion"><i class="fas fa-angle-down fleche"></i>Comment changer son adresse mail sur le compte? </button>
+  <div class="faqAnswers">
+    <p>Pour changer votre adresse mail, <a href="https://vegaprint.fr0.fr/login.html">connectez-vous</a> à votre compte. Ensuite, allez dans votre espace utilisateur et allez dans l’onglet détails du compte. Vous pouvez ici modifier plusieurs champs, dont votre adresse mail.</p>
+  </div>
+
+
+<button class="accordion"><i class="fas fa-angle-down fleche"></i>Comment modifier son mot de passe?</button>
+<div class="faqAnswers">
+  <p>Avant tout, vous devez vous  <a href="https://vegaprint.fr0.fr/login.html">connecter à votre compte</a>. Accédez par la suite à votre espace utilisateur et allez dans l’onglet « détails du compte ». Pour modifier votre mot de passe, tapez votre ancien mot de passe et tapez deux fois le nouveau mot de passe. Nous souhaitons garder chez Vegaprint.fr l’assurance d’une navigation en toute sécurité, c’est pourquoi il vous est demandé d’inscrire un mot de passe de forte densité de caractères pour profiter d’une meilleure protection.</p>
+</div>
+
+<button class="accordion"><i class="fas fa-angle-down fleche"></i>Comment récupérer son mot de passe pour se connecter?</button>
+<div class="faqAnswers">
+  <p>Pour récupérer son mot de passe pour se connecter, il faut dans un premier temps cliquer sur « connexion/ s’inscrire » en haut à droite de la page. Ensuite, cliquez sur « le mot de passe perdu » et saisissez votre identifiant ou votre adresse mail cliquez sur « la réinitialisation du mot de passe ». Ainsi, vous recevrez un e-mail pour créer un nouveau mot de passe.</p>
+</div>
+
+<button class="accordion"><i class="fas fa-angle-down fleche"></i>Comment récupérer ses anciennes factures?</button>
+<div class="faqAnswers">
+  <p>Si vous souhaitez recevoir vos anciennes factures, contactez-nous directement par téléphone ou en nous envoyant un mail avec vos identifiants et adresse de facturation. Nous vous transmettrons une nouvelle fois vos factures par mail.</p>
+</div>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  let i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+
+      const btnFleche = this.querySelector(".fleche");
+      if (this.classList.contains("active")) {
+        btnFleche.classList.remove("fa-angle-down");
+        btnFleche.classList.add("fa-angle-up");
+      } else {
+        btnFleche.classList.remove("fa-angle-up");
+        btnFleche.classList.add("fa-angle-down");
+      }
+
+      const faqAnswers = this.nextElementSibling;
+      if (faqAnswers.style.display === "block") {
+        faqAnswers.style.display = "none";
+      } else {
+        faqAnswers.style.display = "block";
+      }
+    });
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/b82551dea9.js" crossorigin="anonymous"></script>
+
+
+

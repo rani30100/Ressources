@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<button class="accordion gras"><i class="fas fa-angle-down fleche"></i>Quel est le délai de livraison de ma commande ? </button>
+  <div class="faqAnswers">
+    <p class="fade-bottom">Le délai de livraison de votre commande dépend de plusieurs facteurs. Le premier est celui du produit concerné. Lors de la création de votre produit personnalisé, vous avez eu le choix entre plusieurs délais de fabrication. Cela veut dire que c’est le temps estimé pour la création de votre produit dans nos locaux. De même, vous avez pu sélectionner la validation de votre produit via un bon à tirer. Ce délai est à prendre en compte en plus du délai de fabrication. Viens ensuite le délai de livraison qui dépend du transporteur. Vous pouvez nous contacter pour en savoir plus sur l’acheminement de votre colis..</p>
+  </div>
+
+<button class="accordion gras"><i class="fas fa-angle-down fleche"></i>Comment modifier une adresse de livraison ?</button>
+<div class="faqAnswers">
+  <p class="fade-bottom">Il est possible de modifier l’ adresse de livraison, seulement si votre commande n’est pas expédiée. Nous vous conseillons de nous contacter afin d’ effectuer la demande.</p>
+</div>
+
+<button class="accordion gras"><i class="fas fa-angle-down fleche"></i>Colis endommagé :  Que faire ?</button>
+<div class="faqAnswers content">
+  <p>Vérifiez l’état du colis extérieur et intérieur avant toute signature.En cas de dommage, formulez des réserves écrites précises et significatives sur le bordereau de livraison.<br><br>
+
+ECRIRE :MARCHANDISE(S) ENDOMMAGÉE(S).PRODUIT(S) MANQUANT(S) Sans autres précisions, mais accomplir sous 3 jours la formalité de l’article L-133-3 du Code de commerce, La lettre recommandée avec mention précise des articles endommagés et/ou manquants.<br><br>
+
+En cas de livraison où l’état défectueux a été constaté (mouillé, ouvert, explosé………), n’hésitez pas à refuser le colis, avec la réserve : Refusée pour marchandise (s) abîmée (s)Ne jamais écrire Colis abîme(s), Colis ouvert(s), Sous réserve de déballage, Sous toutes réserves, Sous réserve de bon fonctionnement, Trace(s) d’effraction(s), manquant(s)<br><br>
+
+Sans cette réglementation correctement exécutée nous ne pourrons pas donner suite à vos dossiers et aucun échange ni remplacement de marchandises seront possibles.<br><br>
+
+RESPECTEZ LA LOI</p>
+</div>
+
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  let i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+
+      const btnFleche = this.querySelector(".fleche");
+      if (this.classList.contains("active")) {
+        btnFleche.classList.remove("fa-angle-down");
+        btnFleche.classList.add("fa-angle-up");
+      } else {
+        btnFleche.classList.remove("fa-angle-up");
+        btnFleche.classList.add("fa-angle-down");
+      }
+
+      const faqAnswers = this.nextElementSibling;
+      if (faqAnswers.style.display === "block") {
+        faqAnswers.style.display = "none";
+      } else {
+        faqAnswers.style.display = "block";
+      }
+    });
+  }
+
+</script>
+
+
+
+<style>
+    .bloc-answer{
+        width: 80%;
+  display: inline list-item;
+    }
+
+.button {
+    background: grey;
+    cursor: pointer;
+    font-size: 20pt;
+    padding: 16px;
+    width: 80%;
+  box-sizing: border-box;
+}
+.button:hover {
+    opacity: 0.7;
+}
+.content {
+  background: #fff;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+  font-size: 18pt;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+#state:checked ~ .content {  
+  max-height: fit-content;
+}
+.inner {
+  margin: 16px;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+
+}
+
+.faqAnswers {
+  padding: 10px 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+
+}
+.fa-angle-down,.fa-angle-up{
+  padding: 10px;
+
+
+}
+
+.fade-bottom {
+    animation: fade-in-bottom 0.35s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+</style>
+<script src="https://kit.fontawesome.com/b82551dea9.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
